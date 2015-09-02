@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" 
+	xmlns="http://java.sun.com/xml/ns/j2ee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	
+	<servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>InitServlet</servlet-name>
+    <servlet-class>com.dts.core.util.InitServlet</servlet-class>
+    <init-param>
+      <param-name>config</param-name>
+      <param-value>/WEB-INF/config/system.properties</param-value>
+    </init-param>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>InitServlet</servlet-name>
+    <url-pattern>/Initservlet</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Framework Controller Configuration -->
+  <servlet>
+    <servlet-name>DispatchController</servlet-name>
+    <servlet-class>com.dts.core.control.DispatchController</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ExportController</servlet-name>
+    <servlet-class>com.dts.core.control.ExportController</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ReportController</servlet-name>
+    <servlet-class>com.dts.core.control.ReportController</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UIController</servlet-name>
+    <servlet-class>com.dts.core.control.UIController</servlet-class>
+  </servlet>
+   <servlet>
+    <servlet-name>AddUserAction</servlet-name>
+    <servlet-class>com.dts.project.action.AddUserAction</servlet-class>
+  </servlet>
+  
+  <!-- Framework Controller Mapping -->
+  <servlet-mapping>
+    <servlet-name>DispatchController</servlet-name>
+    <url-pattern>/DispatchController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ExportController</servlet-name>
+    <url-pattern>/ExportController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ReportController</servlet-name>
+    <url-pattern>/ReportController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UIController</servlet-name>
+    <url-pattern>/UIController</url-pattern>
+  </servlet-mapping>
+  <!-- Supported Export Modes of ExportController  -->
+  <servlet>
+    <servlet-name>ExportPDF</servlet-name>
+    <servlet-class>com.dts.core.export.ExportPDF</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ExportTXT</servlet-name>
+    <servlet-class>com.dts.core.export.ExportTXT</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ExportXLS</servlet-name>
+    <servlet-class>com.dts.core.export.ExportXLS</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RegisterAction</servlet-name>
+    <servlet-class>com.dts.dae.action.RegisterAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginAction</servlet-name>
+    <servlet-class>com.dts.dae.action.LoginAction</servlet-class>
+  </servlet>
+   <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LogoutAction</servlet-name>
+    <servlet-class>com.dts.dae.action.LogoutAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ChangequestionAction</servlet-name>
+    <servlet-class>com.dts.project.action.ChangequestionAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ChangePasswordAction</servlet-name>
+    <servlet-class>com.dts.project.action.ChangePasswordAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RecoverPasswordAction</servlet-name>
+    <servlet-class>com.dts.project.action.RecoverPasswordAction</servlet-class>
+  </servlet>
+  
+ 
+<servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ChekUserAction</servlet-name>
+    <servlet-class>com.dts.dae.action.ChekUserAction</servlet-class>
+  </servlet>
+ 
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateUserAction</servlet-name>
+    <servlet-class>com.dts.project.action.UpdateUserAction</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetUserAction</servlet-name>
+    <servlet-class>com.dts.dae.action.GetUserAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddClientAction</servlet-name>
+    <servlet-class>com.dts.project.action.AddClientAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddClientAddressAction</servlet-name>
+    <servlet-class>com.dts.project.action.AddClientAddressAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LawTypeAction</servlet-name>
+    <servlet-class>com.dts.project.action.LawTypeAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CaseTypeAction</servlet-name>
+    <servlet-class>com.dts.project.action.CaseTypeAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddCourtTypeAction</servlet-name>
+    <servlet-class>com.dts.project.action.AddCourtTypeAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddCourtAction</servlet-name>
+    <servlet-class>com.dts.project.action.AddCourtAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddSectionAction</servlet-name>
+    <servlet-class>com.dts.project.action.AddSectionAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddCaseRegistrationAction</servlet-name>
+    <servlet-class>com.dts.project.action.AddCaseRegistrationAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddLawyerAction</servlet-name>
+    <servlet-class>com.dts.project.action.AddLawyerAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddEvidenceTypeAction</servlet-name>
+    <servlet-class>com.dts.project.action.AddEvidenceTypeAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddCaseEvidenceAction</servlet-name>
+    <servlet-class>com.dts.project.action.AddCaseEvidenceAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddCaseMemberAction</servlet-name>
+    <servlet-class>com.dts.project.action.AddCaseMemberAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddLawyerTypeAction</servlet-name>
+    <servlet-class>com.dts.project.action.AddLawyerTypeAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddCaseWitnessAction</servlet-name>
+    <servlet-class>com.dts.project.action.AddCaseWitnessAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddCaseHearingAction</servlet-name>
+    <servlet-class>com.dts.project.action.AddCaseHearingAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddCaseLawyerAction</servlet-name>
+    <servlet-class>com.dts.project.action.AddCaseLawyerAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateLawyerAction</servlet-name>
+    <servlet-class>com.dts.project.action.UpdateLawyerAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateCaseMemberAction</servlet-name>
+    <servlet-class>com.dts.project.action.UpdateCaseMemberAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateSectionAction</servlet-name>
+    <servlet-class>com.dts.project.action.UpdateSectionAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateCourtAction</servlet-name>
+    <servlet-class>com.dts.project.action.UpdateCourtAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateCourtTypeAction</servlet-name>
+    <servlet-class>com.dts.project.action.UpdateCourtTypeAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateCaseTypeAction</servlet-name>
+    <servlet-class>com.dts.project.action.UpdateCaseTypeAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateLawTypeAction</servlet-name>
+    <servlet-class>com.dts.project.action.UpdateLawTypeAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateLawyerTypeAction</servlet-name>
+    <servlet-class>com.dts.project.action.UpdateLawyerTypeAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateEvidenceTypeAction</servlet-name>
+    <servlet-class>com.dts.project.action.UpdateEvidenceTypeAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateCaseRegAction</servlet-name>
+    <servlet-class>com.dts.project.action.UpdateCaseRegAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateCaseRegAction1</servlet-name>
+    <servlet-class>com.dts.project.action.UpdateCaseRegAction1</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>GetClientAction</servlet-name>
+    <servlet-class>com.dts.dae.action.GetClientAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateLawyerProfileAction</servlet-name>
+    <servlet-class>com.dts.project.action.UpdateLawyerProfileAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateCaseRegOfPerticularLawyerAction</servlet-name>
+    <servlet-class>com.dts.project.action.UpdateCaseRegOfPerticularLawyerAction</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<servlet-mapping>
+    <servlet-name>ChekUserAction</servlet-name>
+    <url-pattern>/ChekUserAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>LogoutAction</servlet-name>
+    <url-pattern>/LogoutAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RecoverPasswordAction</servlet-name>
+    <url-pattern>/RecoverPasswordAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ExportPDF</servlet-name>
+    <url-pattern>/ExportPDF</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ExportTXT</servlet-name>
+    <url-pattern>/ExportTXT</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ExportXLS</servlet-name>
+    <url-pattern>/ExportXLS</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterAction</servlet-name>
+    <url-pattern>/RegisterAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginAction</servlet-name>
+    <url-pattern>/LoginAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChangequestionAction</servlet-name>
+    <url-pattern>/ChangequestionAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChangePasswordAction</servlet-name>
+    <url-pattern>/ChangePasswordAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddUserAction</servlet-name>
+    <url-pattern>/AddUserAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>UpdateUserAction</servlet-name>
+    <url-pattern>/UpdateUserAction</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>GetUserAction</servlet-name>
+    <url-pattern>/GetUserAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddClientAction</servlet-name>
+    <url-pattern>/AddClientAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddClientAddressAction</servlet-name>
+    <url-pattern>/AddClientAddressAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LawTypeAction</servlet-name>
+    <url-pattern>/LawTypeAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CaseTypeAction</servlet-name>
+    <url-pattern>/CaseTypeAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddCourtTypeAction</servlet-name>
+    <url-pattern>/AddCourtTypeAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddCourtAction</servlet-name>
+    <url-pattern>/AddCourtAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddSectionAction</servlet-name>
+    <url-pattern>/AddSectionAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddCaseRegistrationAction</servlet-name>
+    <url-pattern>/AddCaseRegistrationAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddLawyerAction</servlet-name>
+    <url-pattern>/AddLawyerAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddEvidenceTypeAction</servlet-name>
+    <url-pattern>/AddEvidenceTypeAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddCaseEvidenceAction</servlet-name>
+    <url-pattern>/AddCaseEvidenceAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddCaseMemberAction</servlet-name>
+    <url-pattern>/AddCaseMemberAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddLawyerTypeAction</servlet-name>
+    <url-pattern>/AddLawyerTypeAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddCaseWitnessAction</servlet-name>
+    <url-pattern>/AddCaseWitnessAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddCaseHearingAction</servlet-name>
+    <url-pattern>/AddCaseHearingAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddCaseLawyerAction</servlet-name>
+    <url-pattern>/AddCaseLawyerAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateLawyerAction</servlet-name>
+    <url-pattern>/UpdateLawyerAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateCaseMemberAction</servlet-name>
+    <url-pattern>/UpdateCaseMemberAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateSectionAction</servlet-name>
+    <url-pattern>/UpdateSectionAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateCourtAction</servlet-name>
+    <url-pattern>/UpdateCourtAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateCourtTypeAction</servlet-name>
+    <url-pattern>/UpdateCourtTypeAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateCaseTypeAction</servlet-name>
+    <url-pattern>/UpdateCaseTypeAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateLawTypeAction</servlet-name>
+    <url-pattern>/UpdateLawTypeAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateLawyerTypeAction</servlet-name>
+    <url-pattern>/UpdateLawyerTypeAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateEvidenceTypeAction</servlet-name>
+    <url-pattern>/UpdateEvidenceTypeAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateCaseRegAction</servlet-name>
+    <url-pattern>/UpdateCaseRegAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateCaseRegAction1</servlet-name>
+    <url-pattern>/UpdateCaseRegAction1</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GetClientAction</servlet-name>
+    <url-pattern>/GetClientAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateLawyerProfileAction</servlet-name>
+    <url-pattern>/UpdateLawyerProfileAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateCaseRegOfPerticularLawyerAction</servlet-name>
+    <url-pattern>/UpdateCaseRegOfPerticularLawyerAction</url-pattern>
+  </servlet-mapping>
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <welcome-file-list>
+    <welcome-file>LoginForm.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

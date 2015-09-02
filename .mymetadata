@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="LegalManagementSystem"
+  id="myeclipse.1228470960749"
+  context-root="/LegalManagementSystem"
+  j2ee-spec="1.4"
+  archive="LegalManagementSystem.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
